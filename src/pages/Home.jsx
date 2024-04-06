@@ -6,7 +6,7 @@ export default function Home() {
       <DocumentTitle>Home</DocumentTitle>
 
       <div>
-        <h1>Contacts home page</h1>
+        <h1>Contacts in home page</h1>
       </div>
     </>
   );

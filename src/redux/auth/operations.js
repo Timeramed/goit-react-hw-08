@@ -21,7 +21,7 @@ export const register = createAsyncThunk(
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {
-      toast.error("Registration error:", error);
+      toast.error("Registration error!", error);
       return rejectWithValue(error.message);
     }
   }
@@ -36,7 +36,7 @@ export const logIn = createAsyncThunk(
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {
-      toast.error("Login error:", error);
+      toast.error("Login error!", error);
       return rejectWithValue(error.message);
     }
   }
@@ -47,7 +47,7 @@ export const logOut = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
     await axios.post("/users/logout");
     clearAuthHeader();
   } catch (error) {
-    toast.error("Logout error:", error);
+    toast.error("Logout error!", error);
     return thunkAPI.rejectWithValue(error.message);
   }
 });
